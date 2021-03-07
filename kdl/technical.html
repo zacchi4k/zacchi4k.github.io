@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 
+<!--I'm not good at HTML, so it's possible that there's some terrible markup lurking in here!-->
 <html>
 	<head>
+		<script src="https://kit.fontawesome.com/4b4fac7993.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>KDL Technical information</title>
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<h2>Joker codes</h2>
-		<p>Addresses that contain the button reading from the controller. In Kya, they're stored at <span class="ms">0495B30, 0495B9C</span> and <span class="ms">0495C1C</span> and have these base values:</p><br>
-		<div>
+		<div id="pcsx2">
+			<h2>A note about PCSX2</h2>
+			<p>Me and other members who are investigating the inner workings of Kya DL use <a href="https://www.cheatengine.org/" target="_blank">Cheat engine <i class="fas fa-external-link-alt"></i></a> to find variables and save the findings in a cheat table file, because it's a very powerful and flexible program.<br>
+			However, the latest betas (1.7.0-dev-*) of the <a href="https://www.pcsx2.net/" target="_blank">PCSX2 <i class="fas fa-external-link-alt"></i></a> emulator, as well as any future stable release after 1.6.0, don't always map the PS2 RAM (or at least the EE RAM) at the same location, and this is by design (older versions seem to always map the RAM starting at address 0x20000000).<br>
+			But since, at least with current observations, the starting location seems to only switch between 0x20000000 and 0x30000000, it's possible to keep using Cheat Engine, and change the addresses stored in the cheat table when needed. I created a simple Python script that allows the user to drag and drop the CT file on the script, and it will create a copy of the file with the addresses changed.<br><br>
+			Note: the reason I personally use the 1.7.0 betas instead of the stable version is because the betas have added support for TAS stuff, and more in particular support for frame advancing, which can be extremely helpful in some circumstances.</p>
+			<p><a href="kdl_ct.py" download>Download .py script</a><br>
+			<a href="kdl_ct.exe" download>Download .exe script</a></p>
+		</div>
+		<div id="joker">
+			<h2>Joker codes</h2>
+			<p>Addresses that contain the button reading from the controller. In Kya DL, they're stored at <span class="ms">0495B30, 0495B9C</span> and <span class="ms">0495C1C</span> and have these base values:</p>
 			<table>
 				<tr>
 					<th>Button</th>
