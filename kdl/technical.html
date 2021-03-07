@@ -2,34 +2,14 @@
 
 <html>
 	<head>
-		<style>
-			body {
-				font-family: Helvetica, Arial, sans-serif;
-			}
-			table, th, td {
-				border: 1px solid black;
-				border-collapse: collapse;
-			}
-			th, td {
-				padding: 3px;
-			}
-			th {
-				border-bottom-width: 2px;
-			}
-			
-			.ms {
-				font-family: "Courier New", monospace;
-			}
-			.tb {
-				background-color: #8dfff7;
-			}
-			
-		</style>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>KDL Technical information</title>
+		<meta charset="utf-8">
 	</head>
 	<body>
 		<h2>Joker codes</h2>
 		<p>Addresses that contain the button reading from the controller. In Kya, they're stored at <span class="ms">0495B30, 0495B9C</span> and <span class="ms">0495C1C</span> and have these base values:</p><br>
-		<span>
+		<div>
 			<table>
 				<tr>
 					<th>Button</th>
@@ -373,6 +353,6 @@
 				</tr>
 			</table>
 			<p>When multiple buttons are pressed, the value gets set to [Button 1] AND [Button 2] AND ... [Button N]; for example when pressing R2 + Triangle + Circle the value gets set to <span class="ms">FDFF</span> AND <span class="ms">EFFF</span> AND <span class="ms">DFFF</span> == <span class="ms">CDFF (1100 1101 1111 1111)</span></p>
-		<span>	
+		</div>	
 	</body>
 </html>
