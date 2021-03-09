@@ -1,6 +1,9 @@
 body {
 	font-family: Helvetica, Arial, sans-serif;
 }
+body {
+	font-family: Arial, sans-serif;
+}
 table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -11,12 +14,20 @@ th, td {
 th {
 	border-bottom-width: 2px;
 }
-
-
+table img {
+	vertical-align: middle;
+}
 
 .ms {
 	font-family: "Courier New", monospace;
 }
 .tb {
 	background-color: #8dfff7;
+}
+.hidden {
+	display: none;
+}
+
+#calc_warn {
+	color: red;
 }

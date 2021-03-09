@@ -3,6 +3,7 @@
 <!--I'm not good at HTML, so it's possible that there's some terrible markup lurking in here!-->
 <html>
 	<head>
+		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 		<script src="https://kit.fontawesome.com/4b4fac7993.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>KDL Technical information</title>
@@ -43,67 +44,7 @@
 					<th>Hex value</th>
 				</tr>
 				<tr>
-					<td>Cross</td>
-					<td>1</td>
-					<td class="tb">0</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>BFFF</td>
-				</tr>
-				<tr>
-					<td>Circle</td>
-					<td>1</td>
-					<td>1</td>
-					<td class="tb">0</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>DFFF</td>
-				</tr>
-				<tr>
-					<td>Triangle</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td class="tb">0</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>EFFF</td>
-				</tr>
-				<tr>
-					<td>Square</td>
+					<td><img src="./btn/s.png" alt="□"> Square</td>
 					<td class="tb">0</td>
 					<td>1</td>
 					<td>1</td>
@@ -123,9 +64,47 @@
 					<td>7FFF</td>
 				</tr>
 				<tr>
-					<td>L1</td>
+					<td><img src="./btn/x.png" alt="X"> Cross</td>
+					<td>1</td>
+					<td class="tb">0</td>
 					<td>1</td>
 					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>BFFF</td>
+				</tr>
+				<tr>
+					<td><img src="./btn/o.png" alt="O"> Circle</td>
+					<td>1</td>
+					<td>1</td>
+					<td class="tb">0</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>DFFF</td>
+				</tr>
+				<tr>
+					<td><img src="./btn/t.png" alt="△"> Triangle</td>
 					<td>1</td>
 					<td>1</td>
 					<td>1</td>
@@ -140,50 +119,12 @@
 					<td>1</td>
 					<td>1</td>
 					<td>1</td>
-					<td>FBFF</td>
+					<td>1</td>
+					<td>1</td>
+					<td>EFFF</td>
 				</tr>
 				<tr>
-					<td>L2</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td class="tb">0</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>FEFF</td>
-				</tr>
-				<tr>
-					<td>L3</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td class="tb">0</td>
-					<td>1</td>
-					<td>FFFD</td>
-				</tr>
-				<tr>
-					<td>R1</td>
+					<td><img src="./btn/r1.png" alt="R1"> R1</td>
 					<td>1</td>
 					<td>1</td>
 					<td>1</td>
@@ -203,7 +144,27 @@
 					<td>F7FF</td>
 				</tr>
 				<tr>
-					<td>R2</td>
+					<td><img src="./btn/l1.png" alt="L1"> L1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td class="tb">0</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>FBFF</td>
+				</tr>
+				<tr>
+					<td><img src="./btn/r2.png" alt="R2"> R2</td>
 					<td>1</td>
 					<td>1</td>
 					<td>1</td>
@@ -223,69 +184,7 @@
 					<td>FDFF</td>
 				</tr>
 				<tr>
-					<td>R3</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td class="tb">0</td>
-					<td>1</td>
-					<td>1</td>
-					<td>FFFB</td>
-				</tr>
-				<tr>
-					<td>D-Pad Up</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td class="tb">0</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>FFEF</td>
-				</tr>
-				<tr>
-					<td>D-Pad Right</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td class="tb">0</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>FFDF</td>
-				</tr>
-				<tr>
-					<td>D-Pad Down</td>
-					<td>1</td>
-					<td>1</td>
+					<td><img src="./btn/l2.png" alt="L2"> L2</td>
 					<td>1</td>
 					<td>1</td>
 					<td>1</td>
@@ -300,10 +199,12 @@
 					<td>1</td>
 					<td>1</td>
 					<td>1</td>
-					<td>FFBF</td>
+					<td>1</td>
+					<td>1</td>
+					<td>FEFF</td>
 				</tr>
 				<tr>
-					<td>D-Pad Left</td>
+					<td><img src="./btn/dl.png" alt="←"> D-Pad Left</td>
 					<td>1</td>
 					<td>1</td>
 					<td>1</td>
@@ -323,7 +224,67 @@
 					<td>FF7F</td>
 				</tr>
 				<tr>
-					<td>Start</td>
+					<td><img src="./btn/dd.png" alt="↓"> D-Pad Down</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td class="tb">0</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>FFBF</td>
+				</tr>
+				<tr>
+					<td><img src="./btn/dr.png" alt="→"> D-Pad Right</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td class="tb">0</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>FFDF</td>
+				</tr>
+				<tr>
+					<td><img src="./btn/du.png" alt="↑"> D-Pad Up</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td class="tb">0</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>FFEF</td>
+				</tr>
+				<tr>
+					<td><img src="./btn/st.png" alt="Start"> Start</td>
 					<td>1</td>
 					<td>1</td>
 					<td>1</td>
@@ -343,7 +304,47 @@
 					<td>FFF7</td>
 				</tr>
 				<tr>
-					<td>Select</td>
+					<td><img src="./btn/r3.png" alt="R3"> R3</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td class="tb">0</td>
+					<td>1</td>
+					<td>1</td>
+					<td>FFFB</td>
+				</tr>
+				<tr>
+					<td><img src="./btn/l3.png" alt="L3"> L3</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td class="tb">0</td>
+					<td>1</td>
+					<td>FFFD</td>
+				</tr>
+				<tr>
+					<td><img src="./btn/se.png" alt="Select"> Select</td>
 					<td>1</td>
 					<td>1</td>
 					<td>1</td>
@@ -364,6 +365,70 @@
 				</tr>
 			</table>
 			<p>When multiple buttons are pressed, the value gets set to [Button 1] AND [Button 2] AND ... [Button N]; for example when pressing R2 + Triangle + Circle the value gets set to <span class="ms">FDFF</span> AND <span class="ms">EFFF</span> AND <span class="ms">DFFF</span> == <span class="ms">CDFF (1100 1101 1111 1111)</span></p>
-		</div>	
+			<h4>Joker code calculator:</h4>
+			<div id="jokercalc" style="display:flex;align-items:center;">
+				<table style="float: left;">
+					<tr>
+						<td><img src="./btn/s.png" alt="□"></td>
+						<td><img src="./btn/x.png" alt="X"></td>
+						<td><img src="./btn/o.png" alt="O"></td>
+						<td><img src="./btn/t.png" alt="△"></td>
+						<td><img src="./btn/r1.png" alt="R1"></td>
+						<td><img src="./btn/l1.png" alt="L1"></td>
+						<td><img src="./btn/r2.png" alt="R2"></td>
+						<td><img src="./btn/l2.png" alt="L2"></td>
+						<td><img src="./btn/dl.png" alt="←"></td>
+						<td><img src="./btn/dd.png" alt="↓"></td>
+						<td><img src="./btn/dr.png" alt="→"></td>
+						<td><img src="./btn/du.png" alt="↑"></td>
+						<td><img src="./btn/st.png" alt="Start"></td>
+						<td><img src="./btn/r3.png" alt="R3"></td>
+						<td><img src="./btn/l3.png" alt="L3"></td>
+						<td><img src="./btn/se.png" alt="Select"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cc_s" value="32767"></td>
+						<td><input type="checkbox" id="cc_x" value="49151"></td>
+						<td><input type="checkbox" id="cc_o" value="57343"></td>
+						<td><input type="checkbox" id="cc_t" value="61439"></td>
+						<td><input type="checkbox" id="cc_r1" value="63487"></td>
+						<td><input type="checkbox" id="cc_l1" value="64511"></td>
+						<td><input type="checkbox" id="cc_r2" value="65023"></td>
+						<td><input type="checkbox" id="cc_l2" value="65279"></td>
+						<td><input type="checkbox" id="cc_dl" value="65407"></td>
+						<td><input type="checkbox" id="cc_dd" value="65471"></td>
+						<td><input type="checkbox" id="cc_dr" value="65503"></td>
+						<td><input type="checkbox" id="cc_du" value="65519"></td>
+						<td><input type="checkbox" id="cc_st" value="65527"></td>
+						<td><input type="checkbox" id="cc_r3" value="65531"></td>
+						<td><input type="checkbox" id="cc_l3" value="65533"></td>
+						<td><input type="checkbox" id="cc_se" value="65534"></td>
+					</tr>
+				</table>
+				<span style="vertical-align: middle; margin-left: 3px;">
+					<span id="calc_res" class="ms">FFFF (NOT = 0000)</span><br>
+					<span id="calc_warn" class="hidden">Up+Down or Left+Right is impossible on a controller!</span>
+				</span>
+			</div>
+			<script>
+				// My JavaScript/jQuery skills are even worse :)
+				el = $('#jokercalc').find("[id^=cc_]");
+				function calc() {
+					res = 65535;
+					for (i = 0; i < 16; i++) 
+						if ($(el[i]).prop("checked"))
+							res &= $(el[i]).prop("value");
+							
+					str = `${res.toString(16).toUpperCase()}  (NOT = ${(~res >>> 0).toString(16).toUpperCase().slice(-4)})`;
+					$("#calc_res").html(str);
+					
+					if ( ($('#cc_dd').prop("checked") & $('#cc_du').prop("checked")) |
+					($('#cc_dl').prop("checked") & $('#cc_dr').prop("checked")) )
+						$("#calc_warn").removeClass("hidden");
+					else $("#calc_warn").addClass("hidden");
+				}
+				$(el).on("click", calc);
+			</script>
+		</div>
 	</body>
 </html>
