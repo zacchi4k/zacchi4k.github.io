@@ -419,7 +419,8 @@
 						if ($(el[i]).prop("checked"))
 							res &= $(el[i]).prop("value");
 							
-					str = `${res.toString(16).toUpperCase()}  (NOT = ${(~res >>> 0).toString(16).toUpperCase().slice(-4)})`;
+					res += 65536; //Hacky way to force the inclusion of leading zeroes
+					str = `${res.toString(16).toUpperCase().slice(-4)}  (NOT = ${(~res >>> 0).toString(16).toUpperCase().slice(-4)})`;
 					$("#calc_res").html(str);
 					
 					if ( ($('#cc_dd').prop("checked") & $('#cc_du').prop("checked")) |
