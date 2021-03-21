@@ -3,6 +3,7 @@ body {
 }
 body {
 	font-family: Arial, sans-serif;
+	font-size: 16px;
 }
 table, th, td {
 	border: 1px solid black;
@@ -26,6 +27,15 @@ table img {
 }
 .hidden {
 	display: none;
+}
+.smallimg {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	width: 150px;
+}
+.red {
+	color: red;
 }
 
 #calc_warn {
