@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+		
 		<script src="https://kit.fontawesome.com/4b4fac7993.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>KDL Technical information</title>
@@ -18,10 +19,12 @@
 			Note: the reason I personally use the 1.7.0 betas instead of the stable version is because the betas have added support for TAS stuff, and more in particular support for frame advancing, which can be extremely helpful in some circumstances.</p>
 			<p><a href="kdl_ct.py" download>Download .py script</a><br>
 			<a href="kdl_ct.exe" download>Download .exe script</a></p>
+			<br><br>
+			<p>Also note that I'm providing all the addressess and pointer values as they are mapped on a real console. To get the PCSX2 equivalent, it's sufficient to add 20000000 or 30000000 to the address/base address/offset.</p>
 		</div>
 		<div id="joker">
 			<h2>Joker codes</h2>
-			<p>Addresses that contain the button reading from the controller. In Kya DL, they're stored at <span class="ms">0495B30, 0495B9C</span> and <span class="ms">0495C1C</span> and have these base values:</p>
+			<p>Addresses that contain the button reading from the controller, stored with 4 bits. In Kya DL, they're stored at <code>0495B30, 0495B9C</code> and <code>0495C1C</code> and have these base values:</p>
 			<table>
 				<tr>
 					<th>Button</th>
@@ -64,7 +67,7 @@
 					<td>7FFF</td>
 				</tr>
 				<tr>
-					<td><img src="./btn/x.png" alt="X"> Cross</td>
+					<td> Cross</td>
 					<td>1</td>
 					<td class="tb">0</td>
 					<td>1</td>
@@ -364,7 +367,7 @@
 					<td>FFFE</td>
 				</tr>
 			</table>
-			<p>When multiple buttons are pressed, the value gets set to [Button 1] AND [Button 2] AND ... [Button N]; for example when pressing R2 + Triangle + Circle the value gets set to <span class="ms">FDFF</span> AND <span class="ms">EFFF</span> AND <span class="ms">DFFF</span> == <span class="ms">CDFF (1100 1101 1111 1111)</span></p>
+			<p>When multiple buttons are pressed, the value gets set to [Button 1] AND [Button 2] AND ... [Button N]; for example when pressing R2 + Triangle + Circle the value gets set to <code>FDFF</code> AND <code>EFFF</code> AND <code>DFFF</code> == <code>CDFF (1100 1101 1111 1111)</code></p>
 			<h4>Joker code calculator:</h4>
 			<div id="jokercalc" style="display:flex;align-items:center;">
 				<table style="float: left;">
@@ -406,30 +409,46 @@
 					</tr>
 				</table>
 				<span style="vertical-align: middle; margin-left: 3px;">
-					<span id="calc_res" class="ms">FFFF (NOT = 0000)</span><br>
+					<code id="calc_res">FFFF (NOT = 0000)</code><br>
 					<span id="calc_warn" class="hidden">Up+Down or Left+Right is impossible on a controller!</span>
 				</span>
 			</div>
-			<script>
-				// My JavaScript/jQuery skills are even worse :)
-				el = $('#jokercalc').find("[id^=cc_]");
-				function calc() {
-					res = 65535;
-					for (i = 0; i < 16; i++) 
-						if ($(el[i]).prop("checked"))
-							res &= $(el[i]).prop("value");
-							
-					res += 65536; //Hacky way to force the inclusion of leading zeroes
-					str = `${res.toString(16).toUpperCase().slice(-4)}  (NOT = ${(~res >>> 0).toString(16).toUpperCase().slice(-4)})`;
-					$("#calc_res").html(str);
-					
-					if ( ($('#cc_dd').prop("checked") & $('#cc_du').prop("checked")) |
-					($('#cc_dl').prop("checked") & $('#cc_dr').prop("checked")) )
-						$("#calc_warn").removeClass("hidden");
-					else $("#calc_warn").addClass("hidden");
-				}
-				$(el).on("click", calc);
-			</script>
 		</div>
+		<p>Other PS2 games may store the value in a different way. <a href="https://www.cheatcc.com/psx/codes/jokercom.html" target="_blank">More info here <i class="fas fa-external-link-alt"></i></a></p>
+		<div id="kya_pos_mov">
+			<h2>Kya's position and movement</h2>
+			<p>All currenty known variables of this category are stored with pointers.</p>
+			<h4>Position</h4>
+			<p><strong>Type: </strong> float<br>
+			<strong>Base value: </strong> <code>06F2D90</code><br>
+			<strong>Offset (X): </strong> <code>0000030</code><br>
+			<strong>Offset (Y): </strong> <code>0000034</code><br>
+			<strong>Offset (Z): </strong> <code>0000038</code><br>
+			To give a sense of scale, when Kya jumps by pressing <img src="./btn/x.png" alt="X"> she peaks at around +1.71 Y
+			<br><br>			
+			(it's actually currently unknown which value the game considers to be the X and which one to be the Z, the nomenclature has been chosen based on their order in memory)
+			</p>
+		</div>
+		<!---->
+		<script>
+			// My JavaScript/jQuery skills are even worse :)
+			el = $('#jokercalc').find("[id^=cc_]");
+			function calc() {
+				res = 65535;
+				for (i = 0; i < 16; i++) 
+					if ($(el[i]).prop("checked"))
+						res &= $(el[i]).prop("value");
+						
+				res += 65536; //Hacky way to force the inclusion of leading zeroes
+				str = `${res.toString(16).toUpperCase().slice(-4)}  (NOT = ${(~res >>> 0).toString(16).toUpperCase().slice(-4)})`;
+				$("#calc_res").html(str);
+				
+				if ( ($('#cc_dd').prop("checked") & $('#cc_du').prop("checked")) |
+				($('#cc_dl').prop("checked") & $('#cc_dr').prop("checked")) )
+					$("#calc_warn").removeClass("hidden");
+				else $("#calc_warn").addClass("hidden");
+			}
+			$(el).on("click", calc);
+		</script>
 	</body>
 </html>
