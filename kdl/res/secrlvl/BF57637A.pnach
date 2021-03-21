@@ -1,0 +1,14 @@
+//Kya Dark Lineage NTSC LEVEL_13 maze bypass
+
+//Circle + triangle + left to teleport and to increase the Magika limit
+patch=1,EE,D0495B9C,extended,0000CF7F
+patch=1,EE,606f2d90,extended,41DCC635
+patch=1,EE,00020000,extended,00000030
+patch=1,EE,D0495B9C,extended,0000CF7F
+patch=1,EE,606f2d90,extended,C1674937
+patch=1,EE,00020000,extended,00000034
+patch=1,EE,D0495B9C,extended,0000CF7F
+patch=1,EE,606f2d90,extended,428AAE6D
+patch=1,EE,00020000,extended,00000038
+patch=1,EE,D0495B9C,extended,0000CF7F
+patch=1,EE,2042495C,extended,00000002
