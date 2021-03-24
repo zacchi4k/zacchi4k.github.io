@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 	<head>
 		<script src="https://kit.fontawesome.com/4b4fac7993.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -9,7 +9,8 @@
 	</head>
 	<body>
 		<h1>Hacky ways to access the secret KDL level</h1>
-		<p>It's currently unknown if there's a way to access the secret KDL level (aka LEVEL_13) during normal gameplay, here I explain two ways I know that work to access it (one very hacky, one less but still hacky)</p>
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x_NbmKBNtVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>It's currently unknown if there's a way to access the secret KDL level (aka LEVEL_13) during normal gameplay, here I explain two ways I know that work to access it (one very hacky, one less)</p>
 		<div id="requirements">
 			<h2>Requirements</h2>
 			<ul>
@@ -93,10 +94,19 @@
 			</ul>
 		</div>
 		<div id="console">
-			<h2>Is it possible on console?</h2>
-			<p>Technically, both methods should work on console, assuming you have either a modchip for the modded iso, or homebrew access to copy the save file to a memory card. On console it's also easier to stop the autosave, since you just need to unplug the memory card (also possible but annoying to do every time on PCSX2 via the memory card manager)</p>
-			<p>As for the maze teleport bypass, that is also theorically possible if you convert the cheat to RAW, use Mastercode Finder to... find the mastercode, then use Cheat Device for PS2 (which I recommend) or another cheat device to enter it</p>
-			<p>I have yet to try accessing the level on console, I might do that soon™</p>
+			<h2>Accessing on console</h2>
+			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9rMOnfFkfAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p>Both methods should work on console, assuming you have either a modchip for the modded iso, or homebrew access (FMCB, HDDOSD, modchip, swap trick, exploit, etc) to copy the save file to a memory card. On console it's also easier to stop the autosave, since you just need to unplug the memory card (also possible but annoying to do every time on PCSX2 via the memory card manager)</p>
+			<p>Bypassing the maze is also possible by using a cheat device. In my video, I used Cheat Device for PS2, which what I consider to be the best available. Codebreakers and Action Replay MAX may work and I posted the code for those too, but they're untested.</p>
+			<p>Also note that the Cheat Device for PS2 cheat would also work on OpenPS2Loader, since it uses the same ps2rd cheat engine</p>
+			<a href="./res/secrlvl/maze_cd.txt" target="_blank">Cheat device for PS2 code</a><br>
+			<a href="./res/secrlvl/maze_cb.txt" target="_blank">Codebreakers code</a><br>
+			<a href="./res/secrlvl/maze_armax.txt" target="_blank">Action Replay MAX code</a><br>
+			<p>But for the possesors of either or others cheat discs, I higly recommend installing FMCB (or simple homebrew access) and using Cheat Device for PS2, since it doesn't require converting the codes to stupid encrypted formats, and is free and open source. In fact, if you have a cheat disk, you might already have all you need to install FMCB. Or if you have a new enough PS2 with a working disc drive, the only requirement is an ordinary blank DVD-R (FreeDVDBoot)</p>
+			<a href="https://www.ps2-home.com/forum/viewtopic.php?p=6436#p6434" target="_blank">More info here <i class="fas fa-external-link-alt"></i></a><br>
+			<a href="https://github.com/root670/CheatDevicePS2" target="_blank">Cheat Device for PS2 Github page</a>
 		</div>
+		
+		<p style="font-size: 12px">Special thanks to Snugggles from the Kya DL Speedrunning Discord, for teaching me stuff about pointers and finding variables with CE</p> 
 	</body>
 </html>
