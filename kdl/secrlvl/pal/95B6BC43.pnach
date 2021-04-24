@@ -1,0 +1,19 @@
+//Kya Dark Lineage PAL cheats for LEVEL_13
+author=zacchi4k
+
+//Circle + triangle + left to teleport and to increase the magika limit
+patch=1,EE,D0496C1C,extended,0000CF7F
+patch=1,EE,606f3d90,extended,41DCC635
+patch=1,EE,00020000,extended,00000030
+patch=1,EE,D0496C1C,extended,0000CF7F
+patch=1,EE,606f3d90,extended,C1674937
+patch=1,EE,00020000,extended,00000034
+patch=1,EE,D0496C1C,extended,0000CF7F
+patch=1,EE,606f3d90,extended,428AAE6D
+patch=1,EE,00020000,extended,00000038
+patch=1,EE,D0496C1C,extended,0000CF7F
+patch=1,EE,2042545C,extended,00000002
+
+//Start new game at LEVEL_13
+patch=1,EE,206DB5B4,extended,0000000D
+//Add two slashes at the beginning of the line above to disable it

@@ -1,4 +1,5 @@
-//Kya Dark Lineage NTSC LEVEL_13 maze bypass
+//Kya Dark Lineage NTSC cheats for LEVEL_13
+author=zacchi4k
 
 //Circle + triangle + left to teleport and to increase the Magika limit
 patch=1,EE,D0495B9C,extended,0000CF7F
@@ -12,3 +13,7 @@ patch=1,EE,606f2d90,extended,428AAE6D
 patch=1,EE,00020000,extended,00000038
 patch=1,EE,D0495B9C,extended,0000CF7F
 patch=1,EE,2042495C,extended,00000002
+
+//Start new game at LEVEL_13
+patch=1,EE,206DA5B4,extended,0000000D
+//Add two slashes at the beginning of the line above to disable it

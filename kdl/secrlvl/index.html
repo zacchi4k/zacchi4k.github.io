@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<script src="https://kit.fontawesome.com/4b4fac7993.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="../../style.css">
+		<title>Accessing the secret KDL level</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Hacky ways to access the secret KDL level</h1>
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x_NbmKBNtVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9rMOnfFkfAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>It's currently unknown if there's a way to access the secret KDL level (aka LEVEL_13) during normal gameplay, here I explain three ways I know that work to access it</p>
+		<div id="howto_cheat">
+			<h2>How to - Cheat code method</h2>
+			Requirements for console: <a href="https://github.com/root670/CheatDevicePS2">Cheat Device for PS2 (recommended)</a>, Codebreakers or Action Replay MAX
+			<h3>PCSX2</h3>
+			<ol>
+				<li>Download the correct cheat code for your game:
+					<ul>
+						<li><a href="./ntsc/BF57637A.pnach" target="_blank" download>NTSC</a></li>
+						<li><a href="./pal/95B6BC43.pnach" target="_blank" download>PAL</a></li>
+					</ul>
+				</li>
+				<li>Place it in the PCSX2 <em>cheats</em> directory
+					<ul>
+						<li>If you're using the portable Windows version of PCSX2, it's &lt;emulator directory&gt;\cheats\</li>
+						<li>If you have installed in on Windows, the default directory is Documents\PCSX2\cheats</li>
+						<li>If you have installed in on Linux via the package manager, the default directory <em>sould be</em> ~/.config/PCSX2/cheats</li>
+					</ul>
+				</li>
+				<li>Open PCSX2 and start the game
+					<ul>
+						<li>If it's the first time you use the emulator, you need to configure it for controls and to reduce lag. Google is your friend</li>
+					</ul>
+				</li>
+				<li>Select new game, then select an empty save file or a save file you don't care about; or go to the memory card manager and unplug the virtual memory card to start a game without creating a save</li>
+				<li>After the first few lines of the intro dialog, you'll load into the secret level</li>
+				<li>At this point I recommend you create a save state by pressing F1, which can be reloaded later by pressing F3, since it's possible that the game will autosave once you enter a different area. There are 10 save state slots which can be navigated with the F2 key</li>
+			</ol>
+			<h3>Console</h3>
+			<ol>
+				<li>Download the correct cheat code for your game and cheat device:
+					<ul>
+						<li><a href="./ntsc/maze_cd_ntsc.txt" target="_blank" download>NTSC - Cheat Device for PS2</a></li>
+						<li><a href="./ntsc/maze_cb_ntsc.txt" target="_blank" download>NTSC - Codebreakers (UNTESTED)</a></li>
+						<li><a href="./ntsc/maze_armax_ntsc.txt" target="_blank" download>NTSC - Action Replay MAX (UNTESTED)</a></li>
+						<li><a href="./pal/maze_cd_pal.txt" target="_blank" download>PAL - Cheat Device for PS2</a></li>
+						<li><a href="./pal/maze_cb_pal.txt" target="_blank" download>PAL - Codebreakers (UNTESTED)</a></li>
+						<li><a href="./pal/maze_armax_pal.txt" target="_blank" download>PAL - Action Replay MAX (UNTESTED)</a></li>
+						<li>Note that CDfPS2 uses RAW cheat codes, so those would theoretically also work on OpenPS2Loader</li>
+					</ul>
+				</li>
+				<li>Use the cheat device to enter the cheat code, then launch the game</li>
+				<li>Select new game, then select an empty save file or a save file you don't care about; or unplug the memory card to start the game without creating a save</li>
+				</li>
+				<li>After the first few lines of the intro dialog, you'll load into the secret level</li>
+				<li>At this point I recommend you unplug the memory card to avoid the game autosaving when going to a different area</li>
+			</ol>
+		</div>
+		<div id="howto_hex">
+			<h2>How to - Hex editor method</h2>
+			Requirements: a hex editor (for Windows users, I recomment <a href="https://mh-nexus.de/en/hxd/" target="_blank">HxD <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>), a DVD burner, and a KDL iso or bin/cue file (or a disc to create one)<br>
+			For console: a modchip
+			<h3>PCSX2</h3>
+			<ol>
+				<li>Create a copy of the KDL iso file
+					<ul>
+						<li>If you have a bin/cue file, after creating a copy you may also need to open the cue file with a text editor and change the filename on the first line to match the newly created file</li>
+					</ul>
+				</li>
+				<li>Open the copy you just created with your hex editor of choice</li>
+				<li>Open the string search function (on HxD, press Ctrl+F), and search for <em>AddLevel</em><br>
+				<a href="./hex1.jpg" target="_blank"><img class="smallimg" src="./hex1.jpg" alt="Screenshot"></a></li>
+				<li>Place the cursor right after the <em>1</em> of <em>LEVEL_1</em>, and making sure the hex editor is set to overwrite text mode (HxD should be in that by default, otherwise press <em>Ins</em>), type <em>3"</em>, followed by a space <br>
+				<a href="./hex2.jpg" target="_blank"><img class="smallimg" src="./hex2.jpg" alt="Screenshot"></a>
+				<a href="./hex3.jpg" target="_blank"><img class="smallimg" src="./hex3.jpg" alt="Screenshot"></a></li>
+				<li>Save the file. If you're using HxD and it starts to make a backup, you can cancel it since you've already made a copy</li>
+				<li>Open PCSX2, select the modified iso, and start the emulator
+					<ul>
+						<li>If it's the first time you use the emulator, you need to configure it for controls and to reduce lag. Google is your friend</li>
+					</ul>
+				</li>
+				<li>When the game loads, select New Game, select a file that's empty, or that you don't care about, and start a new game like normal</li>
+				<li>After the first few lines of the intro dialog, you'll load into the secret level</li>
+				<li>At this point I recommend you create a save state by pressing F1, which can be reloaded later by pressing F3, since it's possible that the game will autosave once you enter a different area. There are 10 save state slots which can be navigated with the F2 key</li>
+			</ol>
+			<h3>Console</h3>
+			<p>Create a modified ISO following the instructions above, then burn it on a blank DVD-R.<br>
+			Once you load the level, I recommend you unplug the memory card to avoid the game autosaving when going to a different area.
+</p>
+		</div>
+		<div id="howto_save">
+			<h2>How to - Save file method</h2>
+			Requirements: the <a href="./level_13_NTSC.psu">NTSC save file</a> or the <a href="./level_13_PAL.psu">PAL save file</a><br>
+			For PCSX2: <a href="http://www.csclub.uwaterloo.ca:11068/mymc/" target="_blank">MyMC <i class="fas fa-external-link-alt"></i></a> (for Linux users, I haven't tried if it works with Wine)<br>
+			For console: homebrew access (FMCB, modchip, HDDOSD, exploit, whatever), <a href="https://github.com/ps2homebrew/wLaunchELF/releases/latest">wLaunchElf</a>, and a USB stick supported by wLaunchElf
+			<h3>PCSX2</h3>
+			<ol>
+				<li>Open MyMC</li>
+				<li>Select the Mcd001.ps2 PCSX2 memory card file
+					<ul>
+						<li>You need to launch the emulator at least once to create the file</li>
+						<li>If you're using the portable Windows version of PCSX2, it's in &lt;emulator directory&gt;\memcards\</li>
+						<li>If you have installed in on Windows, the default directory is Documents\PCSX2\memcards</li>
+						<li>If you have installed in on Linux, the default directory <em>sould be</em> ~/.config/PCSX2/memcards</li>
+						<li class="red">If you have KDL save files you don't want to lose in any save slot, create a backup of Mcd001.ps2</li>
+					</ul>
+				</li>
+				<li>If you already have a save file for KDL, highlight it, then go to File &gt; Delete</li>
+				<li>Go to File &gt; Import</li>
+				<li>Import the file you downloaded</li>
+				<li>Close MyMC</li>
+				<li>Open PCSX2, select the game iso, and start the game as normal
+					<ul>
+						<li>If it's the first time you use the emulator, you need to configure it for controls and to reduce lag. Google is your friend</li>
+					</ul>
+				</li>
+				<li>When the game loads, select Load Game, and load the save file, and you'll load into the secret level<br>
+				Note that the game is set to 16:9. You can set PCSX2 to 16:9 by going to Config &gt; Emulation Settings &gt; GS Window</li>
+				<li>At this point I recommend you create a save state by pressing F1, which can be reloaded later by pressing F3, since it's possible that the game will autosave once you enter a different area. There are 10 save state slots which can be navigated with the F2 key</li>
+			</ol>
+			<h3>Console</h3>
+			<ol>
+				<li>Copy the save file to the USB stick</li>
+				<li>Open wLaunchElf</li>
+				<li>Go to mass:, highlight the save file, press R1, and select copy. Then go to mc0:/mc1:, press R1, and select psuPaste
+					<ul>
+						<li class="red">If you have KDL saves you don't want to lose in any save slot, create a backup of the KDL save file from wLE or from the PS2 Browser</li>
+					</ul>
+				</li>
+				<li>Start the game</li>
+				<li>When the game loads, select Load Game, and load the save file, and you'll load into the secret level<br>
+				Note that the game is set to 16:9. You can set PCSX2 to 16:9 by going to Config &gt; Emulation Settings &gt; GS Window</li>
+				<li>At this point I recommend you unplug the memory card to avoid the game autosaving when going to a different area</li>
+			</ol>
+		</div>
+		<div id="maze">
+			<h2>Bypassing the teleport in the maze game</h2>
+			<p>When going to the maze game, there's a teleport that's normally inevitable that I assume is supposed to take you to the maze and set your magika limit to 100, but doesn't work properly. Here I explain how to skip it</p>
+			<h3>PCSX2</h3>
+			<ul>
+				<li>Download the cheat file corresponding to your game from the <a href="#howto_cheat">first section</a></li>
+				<li>Place it in the PCSX2 <em>cheats</em> directory
+					<ul>
+						<li>If you're using the portable Windows version of PCSX2, it's &lt;emulator directory&gt;\cheats\</li>
+						<li>If you have installed in on Windows, the default directory is Documents\PCSX2\cheats</li>
+						<li>If you have installed in on Linux via the package manager, the default directory <em>sould be</em> ~/.config/PCSX2/cheats</li>
+					</ul>
+				</li>
+				<li>On PCSX2, go to System &gt; Enable Cheats</li>
+				<li>When you're in the level, first take the elevator to the <em>Kya Maze</em>, then, without activating the glitched teleport, press Triangle + Circle + Left to teleport inside the maze
+					<ul>
+						<li>The magika counter will remain frozen to "0/50" even if you start collecting orbs, but in the background it is indeed set to a maximum of 100 and it does count up
+						<li>Note that the warps <em>inside</em> the maze are still broken, so avoid them
+					</ul>
+				</li>
+			</ul>
+			<h3>Console</h3>
+			This requires a cheat device on console
+			<ul>
+				<li>Download the cheat file corresponding to your game and cheat device from the <a href="#howto_cheat">first section</a></li>
+				<li>Use the cheat device to enter the cheat code</li>
+				<li>When you're in the level, first take the elevator to the <em>Kya Maze</em>, then, without activating the glitched teleport, press Triangle + Circle + Left to teleport inside the maze
+					<ul>
+						<li>The magika counter will remain frozen to "0/50" even if you start collecting orbs, but in the background it is indeed set to a maximum of 100 and it does count up
+						<li>Note that the warps <em>inside</em> the maze are still broken, so avoid them
+					</ul>
+				</li>
+		</div>		
+		<p style="font-size: 12px">Special thanks to Snugggles from the Kya DL Speedrunning Discord, for teaching me stuff about pointers and finding variables with CE</p> 
+	</body>
+</html>
