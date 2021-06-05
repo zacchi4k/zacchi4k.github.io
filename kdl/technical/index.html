@@ -14,7 +14,7 @@
 		<div id="pcsx2">
 			<h2>A note about PCSX2</h2>
 			<p>Me and other members who are investigating the inner workings of Kya DL use <a href="https://www.cheatengine.org/" target="_blank">Cheat engine <i class="fas fa-external-link-alt"></i></a> to find variables and save the findings in a cheat table file, because it's a very powerful and flexible program.<br>
-			However, the latest betas (1.7.0-dev-*) of the <a href="https://www.pcsx2.net/" target="_blank">PCSX2 <i class="fas fa-external-link-alt"></i></a> emulator, as well as any future stable release after 1.6.0, don't always map the PS2 RAM (or at least the EE RAM) at the same location, and this is by design (older versions seem to always map the RAM starting at address 0x20000000).<br>
+			However, the latest betas (1.7.0-dev-*) of the <a href="https://www.pcsx2.net/" target="_blank">PCSX2 <i class="fas fa-external-link-alt"></i></a> emulator, as well as any future stable release after 1.6.0, don't always map the PS2 RAM (or at least the EE RAM) at the same location, and <a href="https://forums.pcsx2.net/Thread-PCSX2-keeps-changing-where-the-PS2-EE-RAM-is-stored">this is by design <i class="fas fa-external-link-alt"></i></a> (older versions seem to always map the RAM starting at address 0x20000000).<br>
 			But since, at least with current observations, the starting location seems to only switch between 0x20000000 and 0x30000000, it's possible to keep using Cheat Engine, and change the addresses stored in the cheat table when needed. I created a simple Python script that allows the user to drag and drop the CT file on the script, and it will create a copy of the file with the addresses changed.<br><br>
 			Note: the reason I personally use the 1.7.0 betas instead of the stable version is because the betas have added support for TAS stuff, and more in particular support for frame advancing, which can be extremely helpful in some circumstances.</p>
 			<p><a href="kdl_ct.py" download>Download .py script</a><br>
@@ -67,7 +67,7 @@
 					<td>7FFF</td>
 				</tr>
 				<tr>
-					<td> Cross</td>
+					<td><img src="./btn/x.png" alt="X"> Cross</td>
 					<td>1</td>
 					<td class="tb">0</td>
 					<td>1</td>
